@@ -1,0 +1,51 @@
+<h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+    <fieldset>
+      <legend>Enter Your Details</legend>
+    <table>
+      <tr>
+        <th><%= f.label :username %></th>
+        <td><%= f.text_field :username, autofocus: true %></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :email %></th>
+        <td><%= f.email_field :email, autofocus: true %></td></tr>
+      <tr><th>&nbsp;</th>
+        <td>&nbsp;</td></tr>
+
+      <tr>
+        <th><%= f.label :password %></th>
+        <td><%= f.password_field :password, autocomplete: "off" %></td></tr>
+      <tr><th>&nbsp;</th>
+        <td>&nbsp;</td></tr>
+      <tr>
+        <th><%= f.label :password_confirmation %></th>
+        <td><%= f.password_field :password_confirmation, autocomplete: "off" %></td></tr>
+      <tr><th>&nbsp;</th>
+        <td>&nbsp;</td></tr>
+      <tr>
+        <th><%= f.label :address %></th>
+        <td><%= f.text_area :address, autofocus: true , rows:5 , cols:20%></td></tr>
+      <tr><th>&nbsp;</th>
+        <td>&nbsp;</td></tr>
+      <tr>
+        <th><%= f.label :mobile %></th>
+        <td><%= f.text_field :mobile, autofocus: true %></td></tr>
+
+
+
+
+    </table>
+
+  <div><%= f.submit "Sign up" %></div>
+      <%= render "devise/shared/links" %>
+      </fieldset>
+<% end %>
+
+

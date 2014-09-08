@@ -1,0 +1,45 @@
+<ol class="breadcrumb">
+  <li><a href="/products">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="<%= edit_product_path(@product)%>">Edit Product</a></li>
+  <li class="" <%= @product.title %></li>
+</ol>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @product.product %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+<p>
+  <%= image_tag @product.pic.url %>
+</p>
+   
+
+    
+
+  
+<br><br><br>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %> |
+<%= link_to 'Crop', crop_products_path(:id => @product.id) %>

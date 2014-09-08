@@ -1,0 +1,5 @@
+<h5>Hi </h5>
+<%= form_tag("/products" , :method=>"post") do   %>
+<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => false })  %>
+<button type="submit" class="btn btn-primary">SEARCH</button>
+<% end %>

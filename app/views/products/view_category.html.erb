@@ -1,0 +1,5 @@
+<h3>Search By Category</h3>
+<%= form_tag("/products/view" , :method=>"post") do   %>
+<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => false })  %>
+<button type="submit" class="btn-info">SEARCH</button>
+<% end %>

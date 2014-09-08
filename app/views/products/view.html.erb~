@@ -1,0 +1,4 @@
+<%= @cat %>
+<%= @products.each do |p| %>
+<%= p.title %>
+<% end %>

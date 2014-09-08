@@ -1,0 +1,67 @@
+<br><br>
+<div class="thumbnails">
+
+
+  <% @products.each do |product| %>
+
+      <li class="col-sm-4">
+        <div class="products">
+          <button  class="btn btn-default btn-sl" data-toggle="modal" data-target="#myModal" data-img-url="<%= product.pic.url%>" data-id="<%= product.title%>" data-price="<%= product.price%>" data-desc="<%= product.description%>">
+            <img  src="<%= product.pic.url(:thumb) %>">
+          </button>
+
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    <input class="title-input" type="text" value=" "/>
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <img src=" "  align="right"/>
+                  <h4>Price :</h4><input class="price-input" type="text" value=" "/>
+                  <h4>Details :</h4><input type="text" class="desc-input" value=" "/>
+                  <br><br>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+              $('button').click(function (e) {
+                  $('#myModal img').attr('src', $(this).attr('data-img-url'));
+
+                  var product_title = $(this).data('id');
+                  $('.modal-title input').val(product_title);
+
+                  var product_price = $(this).data('price');
+                  $('.price-input').val(product_price);
+
+                  var product_desc = $(this).data('desc');
+                  $('.desc-input').val(product_desc);
+              });
+          </script>
+
+
+
+          <div class="caption">
+            <h3><%= product.title %></h3>
+            <p>Type:<%= product.product %></p>
+            <p><%= product.description %></p>
+            <p>Price: Rs<%= product.price %> /-</p>
+          </div>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+
+
+  <% end %>
+  </div>
+
+
+
+  </li>
+</div>

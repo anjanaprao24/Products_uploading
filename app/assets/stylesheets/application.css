@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+
+ *= require_self
+ *= require_tree .
+ */
+body
+{
+    background-color:#dbdbdb;
+    padding-top: 120px;
+
+}
+.thumbnails li {
+    height: 350px;
+}
+.products
+{
+    height: 300px;
+    background-color:#F7F7F7;
+
+}
+.products:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 15px #ccc;
+}
+legend{
+    background-color: #afd9ee;
+
+}
+.title-input {
+    border: none;
+    background: transparent;
+}
+.price-input {
+    border: none;
+    background: transparent;
+}
+.desc-input {
+    border:none;
+    background: transparent;
+
+}
+
+
+li{
+
+    list-style-type: none;
+}
+
+.facebook{
+    position:absolute;
+    top:5px;
+    left:775px;
+    width:30px;
+    height:25px;
+    align:right;
+}
+.twitter{
+    position:absolute;
+    top:5px;
+    left:820px;
+    width:30px;
+    height:25px;
+    align:right;
+}
+.linkedin{
+    position:absolute;
+    top:5px;
+    left:860px;
+    width:30px;
+    height:25px;
+    align:right;
+}
+.user{
+    position:absolute;
+    top:-1px;
+    left:257px;
+    width:30px;
+    height:25px;
+    align:right;
+}
+.cart
+{
+    position:absolute;
+    top:52px;
+    left:198px;
+    width:50px;
+    height:45px;
+    align:left;
+
+}
+#search{
+    position:absolute;
+    left:450px;
+    top:-18px;
+ }
+
+nav p{
+    color: #2d6ca2;
+    font-weight: bold;
+
+
+}
+#menu{
+    background-color:#46b8da;
+    font-weight: bold;
+}
+#menu:hover {
+    -moz-box-shadow: 10px 10px 10px #ccc;
+    -webkit-box-shadow: 0 10px 10px #46b8da;
+    box-shadow: 10px 10px 15px #46b8da
+}
+
+.btn-group-sm{
+    position:relative;
+    left:786px;
+    top:-5px;	
+
+}
+
